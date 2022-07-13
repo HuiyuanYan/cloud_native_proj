@@ -1,0 +1,19 @@
+apiVersion: apps/v1   # 1.9.0 之前的版本使用 apps/v1beta2，可通过命令 kubectl api-versions 查看
+kind: Deployment    #指定创建资源的角色/类型
+metadata:    #资源的元数据/属性
+  name: cloud-native-proj #资源的名字，在同一个namespace中必须唯一
+  namespace: cloud-native-namespace
+spec:
+  replicas: 2    #副本数量2
+  selector:      #定义标签选择器
+    matchLabels:
+      app: cloud-native-proj
+  template:      #这里Pod的定义
+    metadata:
+      labels:    #Pod的label
+        app: cloud-native-proj
+    spec:        # 指定该资源的内容
+      containers:
+        - name: cloud-native-proj      #容器的名字
+          image: cloud_native_proj  #容器的镜像地址
+          imagePullPolicy: Never
