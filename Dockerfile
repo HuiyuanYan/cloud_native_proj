@@ -10,4 +10,4 @@ ADD ./target/cloud_native_proj-0.0.1-SNAPSHOT.jar /cloud_native_proj.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/cloud_native_proj.jar"]
 #命令：docker build -t cloud_native_proj .
-#docker run --name cloud_native_proj -p 8080:8080 -d cloud_native_proj
+
