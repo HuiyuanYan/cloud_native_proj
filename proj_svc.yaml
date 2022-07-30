@@ -8,7 +8,7 @@ spec:
   selector:
     app: cloud-native-proj
   ports:
-    - nodePort: 30001 # host's port,集群外部访问端口
+    - nodePort: 30002 # host's port,集群外部访问端口
       port: 8888      # service's port,集群内部访问端口
       targetPort: 8080  # target pod's port,服务最终端口，所有流量流至该端口，和DokcerFile中EXPOSE端口一致
       #按照k8s_cmd.sh的命令执行完后，即可通过本机ip:30001端口访问Web服务
