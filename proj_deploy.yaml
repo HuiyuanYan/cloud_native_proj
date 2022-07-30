@@ -2,7 +2,7 @@ apiVersion: apps/v1   # 1.9.0 之前的版本使用 apps/v1beta2，可通过命�
 kind: Deployment    #指定创建资源的角色/类型
 metadata:    #资源的元数据/属性
   name: cloud-native-proj #资源的名字，在同一个namespace中必须唯一
-  namespace: cloud-native-namespace
+  #namespace: cloud-native-namespace
 spec:
   replicas: 2    #副本数量2
   selector:      #定义标签选择器
