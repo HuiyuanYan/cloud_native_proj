@@ -17,3 +17,7 @@ spec:
         - name: cloud-native-proj      #容器的名字
           image: cloud_native_proj  #容器的镜像地址
           imagePullPolicy: Never
+          resources:
+            requests:
+              memory: 50Mi
+              cpu: 50m
