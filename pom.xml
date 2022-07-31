@@ -25,7 +25,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<scope>compile</scope>
 		</dependency>
 
 		<!--接口限流，采用Current Limiting 工具进行-->
@@ -60,7 +60,10 @@
 			<artifactId>simpleclient_hotspot</artifactId>
 			<version>0.1.0</version>
 		</dependency>
-
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
